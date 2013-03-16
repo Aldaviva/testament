@@ -1,0 +1,7 @@
+/:jobId/control/build-available    | boss says a build is available, please test it on this target
+/:jobId/control/build-accepted     | a worker tells the boss it is testing the build on a target
+/:jobId/progress                   | the harness tells the boss it has encountered a test case/suite pass/failure
+/:jobId/done                       | the harness tells the boss it has finished
+/:jobId/:targetId/take-screenshot  | the harness wants its worker to do something fancy, like take a screenshot or examine installed plugin version
+/:jobId/:targetId/screenshot-taken | the worker did something fancy, and is returning the result to the harness
+/:jobId/control/abort              | the boss wants to abort a test
